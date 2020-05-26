@@ -1,26 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.css';
+import GoogleControl from './components/GoogleControl';
+import GoogleMainSearch from './components/GoogleMainSearch';
+import GoogleFooterService from './components/GoogleFooterService';
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      user: {
+        name: 'Nguyễn Phương Tây',
+        email: 'tay@gmail.com', 
+        avatarUrl: 'https://cdn.glitch.com/d408507d-49c6-4771-ad43-408bf2b66c1a%2Favatar.jpg?v=1590485011175'
+      }
+    }
+  }
+  render(){
+    const { user } = this.state;
+    return (
+      <div className="App">
+        <header>
+          <GoogleControl user={user} />
+        </header>
+        <section>
+          <GoogleMainSearch />
+        </section>
+        <footer>
+          <GoogleFooterService />
+        </footer>
+      </div>
+    );
+  }
 }
 
 export default App;

@@ -1,0 +1,36 @@
+.GoogleControl {
+  display: flex;
+  align-items: center;
+  margin: 0 30px;
+}
+.GoogleControl .link {
+  text-decoration: none;
+  color: #000000cc;
+  font-size: 13px;
+  margin-right: 20px;
+}
+.GoogleControl .link:hover {
+  opacity: 0.87;
+  text-decoration: underline;
+}
+.GoogleControl .menu-icon {
+  width: 18px;
+  height: 18px;
+  opacity: .55;
+  transition: .1s;
+  cursor: pointer;
+}
+.GoogleControl .menu-icon:hover {
+  opacity: 1;
+}
+
+.GoogleControl .avatar {
+  background-size: cover;
+  background-position: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  box-shadow: 0 1px 0 rgba(0,0,0,.15);
+  cursor: pointer;
+  margin-left: 20px;
+}
